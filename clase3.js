@@ -237,5 +237,5 @@ const patricia = new BasicStudent({
 
 //console.log(lea)
 console.log(lea.approveCourse(cursoTesting))
-console.log(patricia.publicarComentario("todos giles"))
+console.log(patricia.publicarComentario("muy bueno!"))
 //console.log(patricia)

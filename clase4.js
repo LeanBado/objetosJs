@@ -1,4 +1,4 @@
-//clase de recursividad para lograr copiar objetos anidados y/o arrays anidados y/o con metodos a una variable nueva independiente de la original:
+//clase de recursividad - METODO DEEPCOPY - para lograr copiar objetos anidados y/o arrays anidados y/o con metodos a una variable nueva independiente de la original:
 const obj1 = {
     a: "a",
     b: "b",

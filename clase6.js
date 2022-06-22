@@ -1,5 +1,6 @@
 //factory pattern - RORO (Receive an Object, Return and Object) - función que sirva para crear objetos
 
+
 function create({
     name = advertencia("name"),
     twitter = "default",
@@ -8,7 +9,7 @@ function create({
     email = advertencia("email"),
     instagram,
     cursosAprobados = [],
-} = {}){
+} = {}){            //al poner = {}, por default si crean un objeto y no pasan argumentos, se crea un objeto vacio y NO tira error
     return {
         name,
         edad,           //se puede evitar name: name, edad: edad, porque JS intuye que va a ser el mismo que el parametro pasado
@@ -38,6 +39,7 @@ const lea = create({
 const lauti = create({
     edad: 29,
     name: "Lautaro",
+    email: "lautiEmail",
 })
 console.log(lea);
 console.log(lauti)

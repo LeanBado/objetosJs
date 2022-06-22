@@ -51,12 +51,12 @@ const studentBase = {
   
   const lea = deepCopy(studentBase);
   Object.defineProperty(lea, "name", {
-      value: "Jorge",
+      value: "Lea",
       writable: false, // en falso NO permite que se modifique el valor (por defecto viene en true)
       configurable: false, //en false NO permite que se borre el elemento (por defecto viene en true)
   })
   //Object.seal(lea); //* Ninguna propiedad del objeto lea se podrá eliminar
-  console.log(Object.isSealed(lea)); //* Verifica si el objeto tiene todas sus propiedades protegidas, como por ejemplo con .seal
+  console.log(Object.isSealed(lea)); //* Verifica si el objeto tiene todas sus propiedades protegidas (o sea que tengan valor false), como por ejemplo con .seal
   console.log(Object.isFrozen(lea)); //* Verifica si el objeto tiene todas sus propiedades protegidas y además no se pueden agregar otras
 lea.name = "patricia"
 delete lea.name

@@ -54,3 +54,32 @@ const natalia = {
     age: 28,
     email: "miguelito@platzi.com",
   });
+
+console.log(Object.getOwnPropertyDescriptors(miguelito))  
+//con este metodo se accede a las propiedades del prototype por ej
+// writable, enumerable, configurable (por defecto aparecen todas True)
+//y para editarlas se puede usar:
+Object.defineProperty(/* recibe 3 argumentos: 1 el objeto en el que queremos trabajar, 2 nombre de la nueva propiedad/atributo que queremos guardar, 3 lista de atributos que queremos */ miguelito,"concesionaria",{
+  value: "Automoviles",
+  writable: true,
+  enumerable: true,
+  configurable: true,
+})
+
+Object.seal(miguelito); //pone a configurable como "false", por ende la propiedad no se puede borrar
+Object.freeze(miguelito);//pone configurable y writable como "false", por ende no se puede borrar ni alterar la propiedad
+
+//ayuda memoria
+/* lo que ocurre si la propiedad esta en false
+                              Enumerable      Writable      Configurable
+Listar con
+Objects.Keys                       NO               SI              SI
+
+Listar con
+Object.getOwnPropertyNames          SI              SI            SI 
+
+Modificar value                     SI              NO              SI
+
+Eliminar propiedad
+del objeto                          SI               SI             NO
+*/

@@ -1,0 +1,12 @@
+{
+  "name": "proyecto.cuentas.banco",
+  "version": "1.0.0",
+  "description": "Proyecto Gestión de Cuentas de Banco",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lea",
+  "license": "asd",
+  "type":"module"
+}
